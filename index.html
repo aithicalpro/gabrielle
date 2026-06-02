@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabrielle Winters — Your Engagement</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;700&display=swap');
+:root{
+  --navy:#1B2A4A;--n2:#243460;--n3:#0f1e38;--n4:#162035;
+  --gold:#B8860B;--g2:#C9A84C;--g3:#E8C96A;--gp:#F5E9C8;
+  --cream:#FAF7F2;--white:#fff;
+  --text:#1a1a1a;--muted:#5a6a82;--border:#dde3ed;
+  --green:#15803d;--r:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--n3);color:var(--text);font-size:15px;line-height:1.6;min-height:100vh;}
+
+/* ── HEADER ── */
+.gold-bar{height:4px;background:linear-gradient(90deg,var(--gold),var(--g3),var(--gold));}
+.hdr{background:var(--navy);}
+.hdr-inner{max-width:680px;margin:0 auto;padding:24px 20px 0;}
+.hdr-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;gap:16px;}
+.hdr-left .ey{font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--g3);margin-bottom:8px;}
+.hdr-left h1{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--white);line-height:1.2;max-width:280px;}
+.hdr-left .tl{font-size:11px;color:rgba(255,255,255,0.4);margin-top:5px;line-height:1.5;max-width:260px;}
+.hdr-right{text-align:right;flex-shrink:0;}
+.hdr-right .rl{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g3);margin-bottom:3px;}
+.hdr-right .rn{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:var(--white);}
+.hdr-right .rs{font-size:10px;color:rgba(255,255,255,0.35);margin-top:2px;}
+
+/* PROOF STRIP */
+.proof{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,0.07);}
+.pf{padding:12px 8px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);}
+.pf:last-child{border-right:none;}
+.pf-n{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--g3);line-height:1;display:block;}
+.pf-l{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:3px;display:block;line-height:1.3;}
+
+/* ── MAIN ── */
+.main{max-width:680px;margin:0 auto;padding:20px 16px 120px;}
+
+/* ── QUOTES ── */
+.quotes{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.qc{background:var(--n2);border-radius:var(--r);padding:16px 18px 14px;position:relative;overflow:hidden;}
+.qc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--g3));}
+.qmark{font-family:'Playfair Display',serif;font-size:48px;color:var(--gold);opacity:0.2;position:absolute;top:-6px;left:12px;line-height:1;}
+.qt{font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,0.9);line-height:1.6;position:relative;z-index:1;}
+.qa{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g3);margin-top:8px;}
+
+/* ── PHASE HEADER ── */
+.phase-hdr{margin:20px 0 10px;}
+.ph-step{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--g3);margin-bottom:4px;}
+.ph-title{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--white);line-height:1.15;margin-bottom:3px;}
+.ph-sub{font-size:12px;color:rgba(255,255,255,0.45);}
+
+/* ── PRICE HERO ── */
+.price-hero{background:var(--n2);border-radius:var(--r);padding:20px;margin-bottom:10px;border:1px solid rgba(255,255,255,0.08);}
+.ph-amount{font-family:'Playfair Display',serif;font-size:48px;font-weight:700;color:var(--white);line-height:1;}
+.ph-amount span{font-size:22px;color:var(--g3);}
+.ph-desc{font-size:13px;color:rgba(255,255,255,0.55);margin-top:4px;}
+.ph-break{display:flex;gap:0;margin-top:16px;border-radius:4px;overflow:hidden;}
+.phb-item{flex:1;background:rgba(255,255,255,0.05);padding:12px 10px;text-align:center;border-right:1px solid rgba(255,255,255,0.06);}
+.phb-item:last-child{border-right:none;}
+.phb-amt{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--white);display:block;line-height:1;}
+.phb-label{font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;display:block;}
+
+/* UPFRONT TOGGLE */
+.upfront-toggle{background:var(--n2);border:2px solid rgba(255,255,255,0.1);border-radius:var(--r);padding:14px 16px;margin-bottom:10px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:border-color 0.2s;}
+.upfront-toggle.on{border-color:var(--g3);}
+.ut-radio{width:20px;height:20px;border-radius:50%;border:2px solid rgba(255,255,255,0.25);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.upfront-toggle.on .ut-radio{border-color:var(--g3);background:var(--g3);}
+.ut-dot{width:8px;height:8px;border-radius:50%;background:var(--navy);display:none;}
+.upfront-toggle.on .ut-dot{display:block;}
+.ut-text{flex:1;}
+.ut-title{font-size:13px;font-weight:700;color:var(--white);margin-bottom:2px;}
+.ut-desc{font-size:11px;color:rgba(255,255,255,0.45);}
+.ut-save{background:var(--g3);color:var(--navy);font-size:9px;font-weight:900;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:20px;flex-shrink:0;}
+
+/* ── CARD ── */
+.card{background:var(--white);border-radius:var(--r);margin-bottom:10px;overflow:hidden;}
+.card-hd{padding:14px 18px 10px;border-bottom:1px solid var(--border);}
+.card-ey{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.card-tt{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--navy);}
+.card-ds{font-size:11.5px;color:var(--muted);margin-top:2px;}
+
+/* SERVICE ROWS */
+.sr{display:grid;grid-template-columns:34px 1fr auto;align-items:start;gap:10px;padding:11px 18px;border-bottom:1px solid var(--border);cursor:pointer;transition:background 0.12s;}
+.sr:last-child{border-bottom:none;}
+.sr:hover:not(.locked){background:#f9fafc;}
+.sr.locked{cursor:default;}
+.sr.off .sn{color:#9CA3AF;text-decoration:line-through;}
+.sr.off .sd{color:#C4C9D0;}
+.range-wrap{margin-top:16px;background:rgba(0,0,0,0.25);border-radius:4px;padding:12px 14px;}
+.range-labels{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;gap:6px;}
+.range-label-end{font-size:11px;font-weight:600;color:#ffffff;flex:1;}
+.range-label-end:last-child{text-align:right;}
+.range-label-cur{font-size:12px;font-weight:700;color:var(--g3);background:rgba(232,201,106,0.2);padding:2px 10px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+.range-track{height:5px;background:rgba(255,255,255,0.2);border-radius:3px;position:relative;}
+.range-fill{height:5px;background:linear-gradient(90deg,var(--gold),var(--g3));border-radius:3px;transition:width 0.3s ease;position:relative;min-width:8px;}
+.range-fill::after{content:'';width:12px;height:12px;background:var(--g3);border-radius:50%;position:absolute;right:-6px;top:-4px;box-shadow:0 0 0 3px rgba(232,201,106,0.3);}
+.range-ends{display:flex;justify-content:space-between;margin-top:8px;}
+.range-end-val{font-size:12px;font-weight:700;color:#ffffff;}
+.sr-body{flex:1;cursor:pointer;min-width:0;}
+.sr-hd{display:flex;align-items:flex-start;gap:6px;}
+.chev{font-size:10px;color:var(--muted);transition:transform 0.18s;flex-shrink:0;margin-top:4px;line-height:1;}
+.chev.op{transform:rotate(90deg);color:var(--gold);}
+.sr:hover .chev{color:var(--navy);}
+.sr.off .sp{color:#D1D5DB;}
+.sw{width:34px;height:20px;border-radius:10px;background:#E5E7EB;position:relative;transition:background 0.15s;margin-top:3px;flex-shrink:0;}
+.sw.on{background:var(--navy);}
+.sw.lo{background:var(--navy);opacity:0.45;}
+.swk{width:16px;height:16px;background:var(--white);border-radius:50%;position:absolute;top:2px;left:2px;transition:left 0.15s;box-shadow:0 1px 2px rgba(0,0,0,0.15);}
+.sw.on .swk,.sw.lo .swk{left:16px;}
+.sn{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:1px;}
+.sd{font-size:11px;color:var(--muted);line-height:1.4;display:none;}
+.sd.op{display:block;}
+.sp{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--gold);white-space:nowrap;padding-top:2px;}
+.sp small{font-family:'DM Sans',sans-serif;font-size:10px;color:var(--muted);display:block;text-align:right;}
+.bdg{display:inline-block;font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 5px;border-radius:20px;margin-left:5px;vertical-align:middle;}
+.bd-b{background:#EEF2FF;color:#3730a3;}
+.bd-m{background:#FFF7ED;color:#92400e;}
+.bd-s{background:#F0FDF4;color:#166534;}
+.bd-l{background:#F3F4F6;color:#6B7280;}
+
+/* DIVIDER */
+.phase-sep{display:flex;align-items:center;gap:12px;margin:24px 0 16px;}
+.ps-line{flex:1;height:1px;background:rgba(255,255,255,0.1);}
+.ps-text{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+
+/* COMMITMENT STRIP */
+.commit{background:rgba(200,168,76,0.08);border:1px solid rgba(200,168,76,0.2);border-radius:var(--r);padding:12px 16px;margin-bottom:10px;}
+.commit-text{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.6;}
+.commit-text strong{color:var(--g3);}
+
+/* ── STICKY BAR ── */
+.bar{position:fixed;bottom:0;left:0;right:0;background:var(--n4);border-top:2px solid var(--gold);z-index:200;padding:10px 16px 14px;}
+.bar-inner{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:10px;}
+.bar-cols{flex:1;display:flex;gap:0;min-width:0;}
+.bar-col{flex:1;padding:0 10px;}
+.bar-col:first-child{padding-left:0;border-right:1px solid rgba(255,255,255,0.12);}
+.bar-col:last-child{padding-right:0;}
+.bar-lbl{font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g3);margin-bottom:1px;}
+.bar-amt{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:var(--white);line-height:1;}
+.bar-note{font-size:10px;color:rgba(255,255,255,0.5);margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bar-btn{background:linear-gradient(135deg,var(--gold),var(--g2));color:var(--navy);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;padding:14px 18px;border-radius:var(--r);cursor:pointer;flex-shrink:0;transition:opacity 0.15s;}
+.bar-btn:active{opacity:0.85;}
+
+/* MODAL */
+.overlay{position:fixed;inset:0;background:rgba(5,12,25,0.88);z-index:400;display:none;align-items:flex-end;justify-content:center;}
+.overlay.open{display:flex;}
+.modal{background:var(--white);border-radius:12px 12px 0 0;width:100%;max-width:680px;padding:24px 20px 36px;max-height:88vh;overflow-y:auto;}
+.mod-handle{width:32px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 18px;}
+.mod-ey{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;}
+.mod-tt{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:3px;}
+.mod-amt{font-family:'Playfair Display',serif;font-size:38px;font-weight:700;color:var(--navy);margin:8px 0 3px;}
+.mod-note{font-size:12px;color:var(--muted);margin-bottom:18px;}
+.mod-lines{border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-bottom:18px;}
+.ml{display:flex;justify-content:space-between;padding:9px 13px;font-size:12.5px;border-bottom:1px solid var(--border);}
+.ml:last-child{border-bottom:none;}
+.mll{color:var(--muted);}
+.mlv{font-weight:700;color:var(--navy);}
+.ml.tot{background:var(--navy);}
+.ml.tot .mll{color:rgba(255,255,255,0.55);font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.ml.tot .mlv{color:var(--g3);font-family:'Playfair Display',serif;font-size:17px;}
+.stripe-btn{display:block;width:100%;padding:16px;background:var(--navy);color:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:none;border-radius:var(--r);cursor:pointer;text-decoration:none;text-align:center;margin-bottom:10px;transition:opacity 0.15s;}
+.stripe-btn.gold{background:linear-gradient(135deg,var(--gold),var(--g2));color:var(--navy);}
+.stripe-btn:hover{opacity:0.9;}
+.mod-or{display:flex;align-items:center;gap:8px;margin:12px 0;}
+.mod-or span{font-size:11px;color:var(--muted);}
+.mod-or-line{flex:1;height:1px;background:var(--border);}
+.mod-alt{font-size:12px;color:var(--muted);text-align:center;line-height:1.6;}
+.mod-alt a{color:var(--navy);font-weight:700;text-decoration:none;}
+.mod-close{display:block;width:100%;padding:11px;background:none;border:1px solid var(--border);border-radius:var(--r);cursor:pointer;font-size:13px;color:var(--muted);margin-top:10px;font-family:'DM Sans',sans-serif;}
+
+@media(max-width:480px){
+  .proof{grid-template-columns:repeat(2,1fr);}
+  .pf:nth-child(2){border-right:none;}
+  .hdr-top{flex-direction:column;gap:10px;}
+  .hdr-right{text-align:left;}
+  .bar-amt{font-size:22px;}
+  .ph-amount{font-size:38px;}
+}
+</style>
+</head>
+<body>
+
+<div class="gold-bar"></div>
+
+<!-- HEADER -->
+<div class="hdr">
+<div class="hdr-inner">
+  <div class="hdr-top">
+    <div class="hdr-left">
+      <div class="ey">Aithical.pro &nbsp;&middot;&nbsp; June 2026 &nbsp;&middot;&nbsp; Valid 14 Days</div>
+      <h1>Built for the human.<br>Engineered for the agent.</h1>
+      <div class="tl">We build infrastructure for both the human searching and the AI agent searching on their behalf. At the same time.</div>
+    </div>
+    <div class="hdr-right">
+      <div class="rl">Prepared for</div>
+      <div class="rn">Gabrielle Winters</div>
+      <div class="rs">5 Boro Realty Corp &middot; Brooklyn / Staten Island, NY</div>
+    </div>
+  </div>
+  <div class="proof">
+    <div class="pf"><span class="pf-n">+300%</span><span class="pf-l">Website click growth Bergen County</span></div>
+    <div class="pf"><span class="pf-n">1M+</span><span class="pf-l">Weekly Homes.com views</span></div>
+    <div class="pf"><span class="pf-n">+160%</span><span class="pf-l">Social engagement</span></div>
+    <div class="pf"><span class="pf-n">Live</span><span class="pf-l">ChatGPT citations active</span></div>
+  </div>
+</div>
+</div>
+
+<div class="main">
+
+  <!-- QUOTES -->
+  <div class="quotes" style="margin-top:16px;">
+    <div class="qc">
+      <div class="qmark">&ldquo;</div>
+      <div class="qt">People see me everywhere because of you.</div>
+      <div class="qa">RE/MAX Client &nbsp;&middot;&nbsp; Bergen County</div>
+    </div>
+    <div class="qc">
+      <div class="qmark">&ldquo;</div>
+      <div class="qt">Jay, one of my clients called me after finding me on ChatGPT.</div>
+      <div class="qa">Realtor &nbsp;&middot;&nbsp; Hudson County</div>
+    </div>
+    <div class="qc">
+      <div class="qmark">&ldquo;</div>
+      <div class="qt">The house is under contract but the leads are still coming in.</div>
+      <div class="qa">Realtor &nbsp;&middot;&nbsp; Hudson County</div>
+    </div>
+    <div class="qc">
+      <div class="qmark">&ldquo;</div>
+      <div class="qt">My engagements are going up. People were asking me &ldquo;who is doing professional level stuff?&rdquo;</div>
+      <div class="qa">Realtor &nbsp;&middot;&nbsp; Bergen County</div>
+    </div>
+  </div>
+
+  <!-- DUAL WORLD CALLOUT -->
+  <div style="background:var(--n2);border-radius:var(--r);margin-bottom:20px;overflow:hidden;">
+    <div style="height:2px;background:linear-gradient(90deg,var(--gold),var(--g3),var(--gold));"></div>
+    <div style="padding:18px 20px 16px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--g3);margin-bottom:10px;">Your AI Visibility Score &nbsp;&middot;&nbsp; Audited June 2026</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g3);margin-bottom:7px;">Where You Stand Today</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">Your AI Visibility score is <strong style="color:#f87171;">0 out of 100</strong>. Tested across 125 real estate prompts on ChatGPT, Perplexity, Google AI, Bing Copilot, and Claude. You do not appear in any of them. No website. Dead domain. Thin profiles on Zillow, StreetEasy, and Realtor.com.</div>
+        </div>
+        <div style="background:rgba(200,168,76,0.07);border:1px solid rgba(200,168,76,0.2);border-radius:4px;padding:14px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g3);margin-bottom:7px;">Who Is Winning Instead</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">Brooklyn Home Team / KW appears in <strong style="color:var(--g3);">90%</strong> of buyer and seller prompts. The Behfar Team holds <strong style="color:var(--g3);">87%</strong> presence. Both appear simultaneously across all 5 engines. You have the listings. They have the digital infrastructure.</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding:12px 14px;background:rgba(255,255,255,0.03);border-radius:4px;border-left:3px solid var(--gold);">
+        <div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.6;">You are getting 10 to 20 listings a month on reputation alone. With infrastructure behind you, that becomes a compounding machine. Every listing marketed. Every lead captured. Every AI engine sending buyers to Gabrielle Winters first.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTIC WORLD CALLOUT -->
+  <div style="background:var(--n2);border-radius:var(--r);margin-bottom:20px;overflow:hidden;">
+    <div style="height:2px;background:linear-gradient(90deg,var(--gold),var(--g3),var(--gold));"></div>
+    <div style="padding:18px 20px 16px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--g3);margin-bottom:10px;">Google I/O 2026 &nbsp;&middot;&nbsp; May 19 &nbsp;&middot;&nbsp; The Shift Is Live</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:4px;padding:14px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g3);margin-bottom:7px;">The Human World</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">A luxury buyer types &ldquo;high-end realtor Staten Island&rdquo; and scrolls results. Your website, your Google Business Profile, your schema determine whether you appear. This world still exists. It still matters.</div>
+        </div>
+        <div style="background:rgba(200,168,76,0.07);border:1px solid rgba(200,168,76,0.2);border-radius:4px;padding:14px;">
+          <div style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--g3);margin-bottom:7px;">The Agentic World</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.6;">An AI agent searches 24/7 on a buyer&rsquo;s behalf, builds a shortlist of luxury agents, and in some cases books appointments directly. Google I/O confirmed this is live in real estate now. Machine-readable credentials determine who gets on the list.</div>
+        </div>
+      </div>
+      <div style="margin-top:12px;padding:12px 14px;background:rgba(255,255,255,0.03);border-radius:4px;border-left:3px solid var(--gold);">
+        <div style="font-family:'Playfair Display',serif;font-size:14px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.6;">Everything we build serves both worlds simultaneously. Human-readable. Machine-parseable. One infrastructure. Permanent advantage. You are the Queen of Staten Island in the AI world too, not just in person.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ FRONT OF THE HOUSE ════ -->
+  <div class="phase-hdr">
+    <div class="ph-step">Phase 1A &nbsp;&middot;&nbsp; Days 0 to 60</div>
+    <div class="ph-title">Front of the House</div>
+    <div class="ph-sub">Your digital presence. How buyers and AI engines find you. Everything client-facing.</div>
+  </div>
+
+  <div class="price-hero">
+    <div class="ph-amount"><span>$</span><span id="foh-total-display">6,700</span></div>
+    <div class="ph-desc" id="foh-desc">Paid in 3 installments over 60 days. Full ownership on final payment.</div>
+    <div class="ph-break">
+      <div class="phb-item">
+        <span class="phb-amt" id="foh-day0">$3,350</span>
+        <span class="phb-label">Day 0 &mdash; Start</span>
+      </div>
+      <div class="phb-item">
+        <span class="phb-amt" id="foh-day30">$1,675</span>
+        <span class="phb-label">Day 30 &mdash; Site Live</span>
+      </div>
+      <div class="phb-item">
+        <span class="phb-amt" id="foh-day60">$1,675</span>
+        <span class="phb-label">Day 60 &mdash; Delivered</span>
+      </div>
+    </div>
+    <div class="range-wrap">
+      <div class="range-labels">
+        <span class="range-label-end">Core only</span>
+        <span class="range-label-cur" id="foh-cur-label">$6,700</span>
+        <span class="range-label-end" style="text-align:right;">With add-ons</span>
+      </div>
+      <div class="range-track"><div class="range-fill" id="foh-range-bar" style="width:50%"></div></div>
+      <div class="range-ends">
+        <span class="range-end-val" id="foh-range-min">$4,700</span>
+        <span class="range-end-val" id="foh-range-max">$8,100</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Front of House upfront toggle -->
+  <div class="upfront-toggle" id="foh-upfront-toggle" onclick="toggleFohUpfront()">
+    <div class="ut-radio"><div class="ut-dot"></div></div>
+    <div class="ut-text">
+      <div class="ut-title">Pay Front of the House in full on Day 0</div>
+      <div class="ut-desc" id="foh-ut-desc">Single payment. No milestone schedule.</div>
+    </div>
+    <div class="ut-save" id="foh-ut-save">Save 10%</div>
+  </div>
+
+  <!-- Front of House items -->
+  <div class="card">
+    <div class="card-hd">
+      <div class="card-ey">Front of the House &nbsp;&mdash;&nbsp; Toggle to Adjust</div>
+      <div class="card-tt">How the world finds Gabrielle Winters.</div>
+    </div>
+
+    <!-- Google Business Profile SETUP — Priority 1 -->
+    <div style="background:#FFFBEB;border-left:3px solid var(--gold);padding:8px 18px 6px;font-size:11px;color:#92400e;font-weight:700;letter-spacing:1px;text-transform:uppercase;">&#9733; Priority 1 &nbsp;&mdash;&nbsp; We start Day 1. Your Google Business Profile does not exist yet. This is your foundation.</div>
+    <div class="sr" id="r-gbp">
+      <div class="sw on" id="sw-gbp" onclick="event.stopPropagation();tog('gbp')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('gbp')">
+        <div class="sr-hd"><div class="sn">Google Business Profile Setup <span class="bdg" style="background:#FEF3C7;color:#92400e;">Priority 1</span></div><span class="chev" id="chev-gbp">&#9658;</span></div>
+        <div class="sd" id="sd-gbp"><ul>
+          <li><strong>Starts Day 1</strong> &mdash; you have no Google Business Profile today. We create it, verify it, and make it the first place buyers and AI engines find you.</li>
+          <li>Profile created, verified, and fully optimized for the NYC luxury market</li>
+          <li>Category selection, service areas, and photo library configured from day one</li>
+          <li>Q&amp;A seeding &mdash; common buyer and seller questions answered directly on your profile</li>
+          <li>Review request system activated &mdash; your past clients start leaving reviews immediately</li>
+          <li>Weekly posts on your Google Business Profile &mdash; every listing, every update, always current</li>
+          <li>StreetEasy, Zillow, Realtor.com, Homes.com, and Trulia profiles rebuilt from scratch &mdash; fully filled out, written to show up in AI search answers, luxury-positioned</li>
+          <li><strong>When the Google Business Profile is set up, the $1,500 also covers AI Search Setup &mdash; both delivered for the price of one</strong></li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-gbp">$1,500<small>one-time</small></div>
+    </div>
+
+    <!-- AI VISIBILITY FOUNDATION -->
+    <div class="sr" id="r-aiv">
+      <div class="sw on" id="sw-aiv" onclick="event.stopPropagation();tog('aiv')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('aiv')">
+        <div class="sr-hd"><div class="sn">AI Search Setup <span class="bdg bd-b">Build</span></div><span class="chev" id="chev-aiv">&#9658;</span></div>
+        <div class="sd" id="sd-aiv"><ul>
+          <li>We register you as a recognized name across Google and AI &mdash; credentials, specialization, and markets all linked so every engine knows who Gabrielle Winters is</li>
+          <li>Behind-the-scenes labels that tell ChatGPT, Perplexity, Google AI, and Bing exactly who Gabrielle Winters is</li>
+          <li>Zillow and StreetEasy profiles rewritten for AI retrieval &mdash; your sold history surfaces correctly, not just the one sale currently showing</li>
+          <li>Competitor gap analysis: what Brooklyn Home Team and Behfar Team are citing that you are not</li>
+          <li>We get trusted local businesses &mdash; mortgage brokers, attorneys, title companies &mdash; to reference you online, so AI engines see you mentioned by credible sources</li>
+          <li><strong>Covered by Google Business Profile Setup when both are selected</strong> &mdash; $2,700 of work for $1,500</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-aiv">$1,200<small>one-time</small></div>
+    </div>
+
+    <!-- WEBSITE -->
+    <div class="sr" id="r-website">
+      <div class="sw on" id="sw-website" onclick="event.stopPropagation();tog('website')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('website')">
+        <div class="sr-hd"><div class="sn">AI-Native Luxury Website <span class="bdg bd-b">Build</span></div><span class="chev" id="chev-website">&#9658;</span></div>
+        <div class="sd" id="sd-website"><ul>
+          <li>Built on <strong>gabriellewinters.com</strong> &mdash; your asset, not the brokerage&rsquo;s</li>
+          <li>Luxury-positioned brand: 5-year experience, multi-borough expertise, high-end market authority</li>
+          <li>FAQ pages written to directly answer the questions luxury buyers ask ChatGPT, Perplexity, and Google AI</li>
+          <li>Behind-the-scenes labels that tell Google and every AI engine exactly who you are, what you do, and where you work</li>
+          <li>Lead capture funnels: home valuation tool, buyer consultation form, seller CMA request, off-market inquiry form</li>
+          <li>Buyer and seller guide library: NYC co-op buying guide, luxury condo guide, Staten Island neighborhood guide, 5-borough investment guide</li>
+          <li>4 AI-optimized listing landing pages included at build &mdash; additional pages available monthly</li>
+          <li>Google Analytics 4 and Search Console connected</li>
+          <li>Mobile-first &mdash; fully operable on your phone, no desktop required</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-website">$3,500<small>one-time</small></div>
+    </div>
+
+    <!-- DYNAMIC MARKET LAYER -->
+    <div class="sr" id="r-dynamic">
+      <div class="sw on" id="sw-dynamic" onclick="event.stopPropagation();tog('dynamic')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('dynamic')">
+        <div class="sr-hd"><div class="sn">NYC Market Data Feed <span class="bdg bd-b">Build</span></div><span class="chev" id="chev-dynamic">&#9658;</span></div>
+        <div class="sd" id="sd-dynamic"><ul>
+          <li>Median sale price, days on market, and inventory refreshed weekly across all 5 boroughs</li>
+          <li>Current 30-year mortgage rate and jumbo loan rate updated daily</li>
+          <li>Market temperature indicator calculated automatically: buyer, balanced, or seller by borough</li>
+          <li>AI generates luxury market commentary published to your site every week &mdash; no manual writing</li>
+          <li>NYC-specific regulatory monitoring: mansion tax thresholds, NYC real estate transfer tax changes, co-op board policy shifts, condo conversion updates</li>
+          <li>Federal policy tracking: FHA/VA limits, foreign buyer rules, 1031 exchange guidance</li>
+          <li>Gabrielle is always the most informed agent in the room &mdash; before her clients hear it elsewhere</li>
+          <li>No manual updates required &mdash; always current, always citable by AI engines</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-dynamic">$1,700<small>one-time</small></div>
+    </div>
+
+    <!-- YOUTUBE -->
+    <div class="sr off" id="r-yt">
+      <div class="sw" id="sw-yt" onclick="event.stopPropagation();tog('yt')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('yt')">
+        <div class="sr-hd"><div class="sn">YouTube Strategy <span class="bdg bd-b">Build</span></div><span class="chev" id="chev-yt">&#9658;</span></div>
+        <div class="sd" id="sd-yt"><ul>
+          <li>Channel optimization and keyword targeting for NYC luxury real estate</li>
+          <li>90-day content strategy: listing tours, borough guides, luxury buyer education, market update format</li>
+          <li>Content structured to build visibility on Grok and Genspark</li>
+          <li>First video brief delivered at kickoff &mdash; ready to record day one</li>
+          <li>You are on camera. Your personality is your brand. This turns that into a searchable asset.</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-yt">$700<small>one-time</small></div>
+    </div>
+
+  </div>
+
+  <div class="commit">
+    <div class="commit-text"><strong>Milestone payments protect you.</strong> Day 30 payment triggers only when the website is live. Day 60 triggers only when full front-of-house delivery is complete and ownership transfers.</div>
+  </div>
+
+  <!-- ════ BACK OF THE HOUSE ════ -->
+  <div class="phase-sep"><div class="ps-line"></div><div class="ps-text">Add the operating system</div><div class="ps-line"></div></div>
+
+  <div class="phase-hdr" style="margin-top:0;">
+    <div class="ph-step">Phase 1B &nbsp;&middot;&nbsp; Optional &nbsp;&middot;&nbsp; Runs parallel or deferred</div>
+    <div class="ph-title">Back of the House</div>
+    <div class="ph-sub">Your operating system. How you run the business. Paperwork, pipeline, clients, commissions &mdash; one place.</div>
+  </div>
+
+  <div class="price-hero">
+    <div class="ph-amount"><span>$</span><span id="boh-total-display">3,500</span></div>
+    <div class="ph-desc" id="boh-desc">Paid in 2 installments. 50% at kickoff, 50% at delivery.</div>
+    <div class="ph-break">
+      <div class="phb-item">
+        <span class="phb-amt" id="boh-day0">$1,750</span>
+        <span class="phb-label">Day 0 &mdash; Kickoff</span>
+      </div>
+      <div class="phb-item">
+        <span class="phb-amt" id="boh-day30">$1,750</span>
+        <span class="phb-label">Day 30 &mdash; Delivered</span>
+      </div>
+      <div class="phb-item">
+        <span class="phb-amt" id="boh-day60">&mdash;</span>
+        <span class="phb-label">Fully Yours</span>
+      </div>
+    </div>
+    <div class="range-wrap">
+      <div class="range-labels">
+        <span class="range-label-end">OS only</span>
+        <span class="range-label-cur" id="boh-cur-label">$3,500</span>
+        <span class="range-label-end" style="text-align:right;">With agents</span>
+      </div>
+      <div class="range-track"><div class="range-fill" id="boh-range-bar" style="width:0%"></div></div>
+      <div class="range-ends">
+        <span class="range-end-val" id="boh-range-min">$3,500</span>
+        <span class="range-end-val" id="boh-range-max">$5,300</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back of House upfront toggle -->
+  <div class="upfront-toggle" id="boh-upfront-toggle" onclick="toggleBohUpfront()">
+    <div class="ut-radio"><div class="ut-dot"></div></div>
+    <div class="ut-text">
+      <div class="ut-title">Pay Back of the House in full on Day 0</div>
+      <div class="ut-desc" id="boh-ut-desc">Single payment. No milestone schedule.</div>
+    </div>
+    <div class="ut-save" id="boh-ut-save">Save 10%</div>
+  </div>
+
+  <!-- Back of House items -->
+  <div class="card">
+    <div class="card-hd">
+      <div class="card-ey">Back of the House &nbsp;&mdash;&nbsp; Toggle to Adjust</div>
+      <div class="card-tt">The system that ends the 20-minutes-per-document problem.</div>
+    </div>
+
+    <!-- OPERATING SYSTEM -->
+    <div class="sr" id="r-brain">
+      <div class="sw on" id="sw-brain" onclick="event.stopPropagation();tog('brain')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('brain')">
+        <div class="sr-hd"><div class="sn">Gabrielle Winters Operating System <span class="bdg bd-b">Build</span></div><span class="chev" id="chev-brain">&#9658;</span></div>
+        <div class="sd" id="sd-brain"><ul>
+          <li><strong>This is the system that ends the 20-minutes-per-document problem.</strong> Talk to it. It fills the form.</li>
+          <li>Dashboard for all properties: buyers, sellers, renters &mdash; every lead, every status, one screen</li>
+          <li>Transaction tracking: commission tracker, expense tracker, milestone alerts</li>
+          <li>Document automation: lease agreements, purchase contracts, disclosure forms &mdash; voice-fill or template-fill, no manual typing</li>
+          <li>Spreadsheet migration: you send your current sheets, we load everything in. Clean slate from day one.</li>
+          <li>CRM built in your Claude instance &mdash; your asset, not a vendor subscription you lose if you leave</li>
+          <li>Your 2,000 existing contacts imported and tagged: buyer, seller, renter, past client, referral source</li>
+          <li>Off-market listing management: private listings tracked separately, marketed discreetly</li>
+          <li>Mobile-first: full functionality from your phone while you&rsquo;re driving between appointments</li>
+          <li>Voice input: record client notes and SOPs while driving &mdash; system logs and formats automatically</li>
+          <li><strong>Jay&rsquo;s team has eyes on the system too.</strong> You log in and manage your business. We watch for gaps, flag stale leads, and keep the machine running &mdash; you are never operating alone.</li>
+          <li>Solo now, team-ready architecture &mdash; when you hire, the system scales with you</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-brain">$3,500<small>one-time</small></div>
+    </div>
+
+    <!-- AI AGENT BUNDLE -->
+    <div class="sr off" id="r-agents">
+      <div class="sw" id="sw-agents" onclick="event.stopPropagation();tog('agents')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('agents')">
+        <div class="sr-hd"><div class="sn">Automation Bundle <span class="bdg bd-s">Add-On</span></div><span class="chev" id="chev-agents">&#9658;</span></div>
+        <div class="sd" id="sd-agents"><ul>
+          <li><strong>Database Reactivation Agent:</strong> automatically sequences your 2,000 dormant contacts with market updates and check-ins &mdash; reactivates relationships without you lifting a finger</li>
+          <li><strong>Competitor Intelligence Agent:</strong> monitors Brooklyn Home Team, Behfar Team, and Corcoran Brooklyn in AI search in real time</li>
+          <li><strong>Listing Pipeline Agent:</strong> tracks every listing through the marketing cycle &mdash; alerts you when a campaign is due, a lead hasn&rsquo;t been followed up, or a listing page needs updating</li>
+          <li>Market value $2,800 &mdash; included at signing price</li>
+          <li>Optional maintenance at $99 per agent per month</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-agents">$1,800<small>add-on</small></div>
+    </div>
+
+  </div>
+
+  <div class="commit">
+    <div class="commit-text"><strong>Start with Front of the House if you want to begin at $6,700.</strong> Add Back of the House now or any time. Both run in parallel if selected together &mdash; you get the full system in 60 days. You own everything on final payment.</div>
+  </div>
+
+  <!-- PHASE 2: MONTHLY -->
+  <div class="phase-sep"><div class="ps-line"></div><div class="ps-text">After the build is done</div><div class="ps-line"></div></div>
+
+  <div class="phase-hdr" style="margin-top:0;">
+    <div class="ph-step">Phase 2 &nbsp;&middot;&nbsp; Month 3 Onward</div>
+    <div class="ph-title">Monthly Management</div>
+    <div class="ph-sub">Starts after the build is complete. Cancel anytime with 30 days notice.</div>
+  </div>
+
+  <div class="price-hero">
+    <div class="ph-amount"><span>$</span><span id="mo-total-display">4,093</span><span style="font-size:18px;color:rgba(255,255,255,0.5);">/month</span></div>
+    <div class="ph-desc">Month-to-month after 3-month minimum. 30 days notice to cancel. No lock-in.</div>
+    <div class="range-wrap">
+      <div class="range-labels">
+        <span class="range-label-end">Core services</span>
+        <span class="range-label-cur" id="mo-cur-label">$4,093/mo</span>
+        <span class="range-label-end" style="text-align:right;">All services</span>
+      </div>
+      <div class="range-track"><div class="range-fill" id="mo-range-bar" style="width:2%"></div></div>
+      <div class="range-ends">
+        <span class="range-end-val" id="mo-range-min">$2,293/mo</span>
+        <span class="range-end-val" id="mo-range-max">$5,143/mo</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-hd">
+      <div class="card-ey">What Runs Every Month &nbsp;&mdash;&nbsp; Toggle to Adjust</div>
+      <div class="card-tt">Everything managed. You focus on relationships.</div>
+    </div>
+
+    <!-- LISTING MARKETING ENGINE — key differentiator for Gabrielle -->
+    <div style="background:#F0FDF4;border-left:3px solid #15803d;padding:8px 18px 6px;font-size:11px;color:#166534;font-weight:700;letter-spacing:1px;text-transform:uppercase;">&#9733; Built for Your Volume &nbsp;&mdash;&nbsp; Covers up to 12 listings/month</div>
+    <div class="sr" id="r-listings">
+      <div class="sw on" id="sw-listings" onclick="event.stopPropagation();tog('listings')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('listings')">
+        <div class="sr-hd"><div class="sn">Listing Marketing Engine <span class="bdg bd-s">High Volume</span></div><span class="chev" id="chev-listings">&#9658;</span></div>
+        <div class="sd" id="sd-listings"><ul>
+          <li>Covers up to 12 listings per month &mdash; each gets a full marketing package</li>
+          <li>Per listing: dedicated landing page, 2 social posts (Instagram + Facebook), listing description written for both Google search and AI search, targeted at the ideal buyer for that property</li>
+          <li>Off-market listings handled discreetly: private landing page with inquiry form, no public address, targeted outreach to your qualified buyer list</li>
+          <li>Listing pipeline updated in your Operating System automatically as properties move through stages</li>
+          <li>Listings that go under contract stay live for ongoing proof of your track record when AI engines answer questions about top agents in your market</li>
+          <li>Each listing page written to answer the specific questions buyers ask AI engines about that property type and neighborhood</li>
+          <li>Additional listings beyond 12 billed at $150 each &mdash; no surprises</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-listings">$1,800<small>/month</small></div>
+    </div>
+
+    <!-- CONTENT + VISIBILITY ENGINE -->
+    <div class="sr" id="r-content">
+      <div class="sw on" id="sw-content" onclick="event.stopPropagation();tog('content')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('content')">
+        <div class="sr-hd"><div class="sn">Social Media + Content</div><span class="chev" id="chev-content">&#9658;</span></div>
+        <div class="sd" id="sd-content"><ul>
+          <li>2 Reels per week produced from your organic footage or existing listing media</li>
+          <li>Weekly content idea list &mdash; you record, we edit and publish</li>
+          <li>Captions, hashtags, scheduling across Instagram, Facebook, LinkedIn, and YouTube Shorts</li>
+          <li>Every post engineered to build visibility on AI search engines at the same time as your regular audience</li>
+          <li>Your voice, your face, your personality &mdash; not AI-generated content</li>
+          <li>Content calendar delivered every Monday morning so you know what&rsquo;s going out all week</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-content">$1,800<small>/month</small></div>
+    </div>
+
+    <!-- CRM CAMPAIGNS -->
+    <div class="sr" id="r-crm">
+      <div class="sw on" id="sw-crm" onclick="event.stopPropagation();tog('crm')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('crm')">
+        <div class="sr-hd"><div class="sn">Database + Client Outreach <span class="bdg" style="background:#F0FDF4;color:#166534;">Recommended</span></div><span class="chev" id="chev-crm">&#9658;</span></div>
+        <div class="sd" id="sd-crm"><ul>
+          <li>80% of your business is existing clients and referrals &mdash; your 2,000-person database is your gold mine</li>
+          <li>Monthly market updates, check-ins, and anniversary touchpoints sent on your behalf</li>
+          <li>Referral nudge sequences that keep you top of mind between closings</li>
+          <li><strong>Database reactivation sequence for all contacts not touched since September 2025</strong> &mdash; warm them back up with a market update, not a cold pitch</li>
+          <li>Every campaign drafted and sent on your behalf &mdash; you approve, we execute</li>
+          <li>Once you have 1,000 people actively engaged in your database, this alone sustains your business. You already have 2,000.</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-crm">$199<small>/month</small></div>
+    </div>
+
+    <!-- AI VISIBILITY MONITORING -->
+    <div class="sr" id="r-mon">
+      <div class="sw on" id="sw-mon" onclick="event.stopPropagation();tog('mon')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('mon')">
+        <div class="sr-hd"><div class="sn">AI Search Ranking Monitor</div><span class="chev" id="chev-mon">&#9658;</span></div>
+        <div class="sd" id="sd-mon"><ul>
+          <li>5 AI engines checked every month: ChatGPT, Perplexity, Google AI, Claude, and Bing</li>
+          <li>Brooklyn Home Team, Behfar Team, and Corcoran Brooklyn benchmarked against your growing position</li>
+          <li>Your score tracked from the 0/100 baseline &mdash; every point of progress documented</li>
+          <li>Plain-English monthly report showing what moved and why</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-mon">$150<small>/month</small></div>
+    </div>
+
+    <!-- WEBSITE MANAGEMENT + Google Business Profile -->
+    <div class="sr off" id="r-gbpmanage">
+      <div class="sw" id="sw-gbpmanage" onclick="event.stopPropagation();tog('gbpmanage')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('gbpmanage')">
+        <div class="sr-hd"><div class="sn">Website Management + Google Business Profile</div><span class="chev" id="chev-gbpmanage">&#9658;</span></div>
+        <div class="sd" id="sd-gbpmanage"><ul>
+          <li>Ongoing website optimization &mdash; content updates, corrections, and performance improvements</li>
+          <li>1 new property landing page per month &mdash; built, optimized, and published for each new listing (up to 4 standard listings; see Listing Marketing Engine for full volume coverage)</li>
+          <li>Ongoing Google Business Profile posts &mdash; every listing and update posted every week</li>
+          <li>Review responses drafted and posted on your behalf</li>
+          <li>Common buyer questions answered directly on your Google Business Profile &mdash; buyers get answers before they even call</li>
+          <li>Your Google Business Profile reviewed monthly &mdash; categories, photos, and performance checked and adjusted</li>
+          <li><strong>Complimentary when Social Media + Content is included.</strong> Standalone price $399/month.</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-gbpmanage">$399<small>/month</small></div>
+    </div>
+
+    <!-- AI AVATAR VIDEO -->
+    <div class="sr off" id="r-avatar">
+      <div class="sw" id="sw-avatar" onclick="event.stopPropagation();tog('avatar')"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('avatar')">
+        <div class="sr-hd"><div class="sn">AI Avatar Video Package <span class="bdg" style="background:#F3E8FF;color:#6B21A8;">Optional</span></div><span class="chev" id="chev-avatar">&#9658;</span></div>
+        <div class="sd" id="sd-avatar"><ul>
+          <li>6 hyper-realistic AI avatar videos per month &mdash; 30 seconds each</li>
+          <li>Custom avatar trained on your likeness and voice profile</li>
+          <li>Scripts written and produced on your behalf &mdash; you review before publishing</li>
+          <li>Ideal for market updates, listing spotlights, luxury buyer tips, and off-market teasers</li>
+          <li>Published across Instagram Reels, Facebook, LinkedIn, and YouTube Shorts</li>
+          <li>Every video structured for the same signals that make Google search and AI search both work in your favor</li>
+          <li>No filming, no camera days required</li>
+        </ul></div>
+      </div>
+      <div class="sp" id="sp-avatar">$1,200<small>/month</small></div>
+    </div>
+
+    <!-- CLOUD INFRASTRUCTURE (locked) -->
+    <div class="sr locked">
+      <div class="sw lo"><div class="swk"></div></div>
+      <div class="sr-body" onclick="expand('cloud')">
+        <div class="sr-hd"><div class="sn">Software Subscriptions <span class="bdg bd-l">Pass-through</span></div><span class="chev" id="chev-cloud">&#9658;</span></div>
+        <div class="sd" id="sd-cloud"><ul>
+          <li>Claude Max for your Operating System and all AI workflows</li>
+          <li>Google Workspace Business Standard &mdash; Gemini AI included</li>
+          <li>API automation budget for all running agents</li>
+          <li>Billed at cost &mdash; you own these subscriptions directly. Your asset, not ours.</li>
+        </ul></div>
+      </div>
+      <div class="sp">$144<small>/month</small></div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<!-- STICKY BAR -->
+<div class="bar">
+  <div class="bar-inner">
+    <div class="bar-cols">
+      <div class="bar-col">
+        <div class="bar-lbl" id="bar-lbl">Start today for</div>
+        <div class="bar-amt" id="bar-amt">$5,450</div>
+        <div class="bar-note" id="bar-note">Build over 60 days</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-lbl">Monthly from Day 60</div>
+        <div class="bar-amt" id="bar-mo-amt">$4,093</div>
+        <div class="bar-note" id="bar-mo-note">After build complete</div>
+      </div>
+    </div>
+    <button class="bar-btn" onclick="openModal()">Finalize Package</button>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="closeOut(event)">
+  <div class="modal">
+    <div class="mod-handle"></div>
+    <div class="mod-ey">Aithical.pro &nbsp;&middot;&nbsp; Secure Checkout</div>
+    <div class="mod-tt" id="mod-tt">Your Package</div>
+    <div class="mod-amt" id="mod-amt">$5,450</div>
+    <div class="mod-note" id="mod-note">Due today at signing. Work begins within 48 hours.</div>
+
+    <div class="mod-lines" id="mod-lines"></div>
+
+    <button id="pay-stripe-btn" onclick="startCheckout()"
+      style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:linear-gradient(135deg,var(--gold),var(--g2));color:var(--navy);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border:none;border-radius:6px;cursor:pointer;margin-bottom:10px;">
+      <span id="pay-btn-label">Pay with Card &rarr;</span>
+    </button>
+
+    <div id="pay-error" style="display:none;background:#FEF2F2;border:1px solid #FECACA;border-radius:6px;padding:10px 14px;font-size:12px;color:#DC2626;margin-bottom:10px;"></div>
+
+    <div style="display:flex;align-items:center;gap:8px;margin:10px 0;">
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+      <span style="font-size:11px;color:var(--muted);">or</span>
+      <div style="flex:1;height:1px;background:var(--border);"></div>
+    </div>
+    <div style="font-size:12px;color:var(--muted);text-align:center;line-height:1.7;">
+      <a id="whatsapp-link" href="#" target="_blank" style="color:var(--navy);font-weight:700;text-decoration:none;">WhatsApp Jay</a>
+      &nbsp;&middot;&nbsp;
+      <a id="email-link" href="#" style="color:var(--navy);font-weight:700;text-decoration:none;">jbatra@aithical.pro</a>
+    </div>
+
+    <button class="mod-close" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+const P = {
+  gbp:1500, aiv:1200, website:3500, dynamic:1700, yt:700,
+  brain:3500, agents:1800,
+  listings:1800, content:1800, crm:199, mon:150, gbpmanage:399, cloud:144, avatar:1200
+};
+const S = {
+  gbp:true, aiv:true, website:true, dynamic:true, yt:false, fohUpfront:false,
+  brain:true, agents:false, bohUpfront:false,
+  listings:true, content:true, crm:true, mon:true, gbpmanage:false, avatar:false
+};
+
+function f(n){ return '$'+n.toLocaleString('en-US'); }
+function set(id,val){ const el=document.getElementById(id); if(el) el.textContent=val; }
+function setHTML(id,val){ const el=document.getElementById(id); if(el) el.innerHTML=val; }
+function setWidth(id,val){ const el=document.getElementById(id); if(el) el.style.width=val; }
+
+function tog(id){
+  const fohKeys=['website','aiv','dynamic','gbp'];
+  const bohKeys=['brain'];
+  if(fohKeys.includes(id)){ if(fohKeys.filter(k=>k!==id&&S[k]).length===0&&S[id]) return; }
+  if(bohKeys.includes(id)){ if(bohKeys.filter(k=>k!==id&&S[k]).length===0&&S[id]) return; }
+  S[id]=!S[id];
+  const sw=document.getElementById('sw-'+id);
+  const row=document.getElementById('r-'+id);
+  if(sw) sw.className='sw'+(S[id]?' on':'');
+  if(row) row.classList.toggle('off',!S[id]);
+  render();
+}
+
+function toggleFohUpfront(){
+  S.fohUpfront=!S.fohUpfront;
+  const el=document.getElementById('foh-upfront-toggle');
+  if(el) el.classList.toggle('on',S.fohUpfront);
+  render();
+}
+function toggleBohUpfront(){
+  S.bohUpfront=!S.bohUpfront;
+  const el=document.getElementById('boh-upfront-toggle');
+  if(el) el.classList.toggle('on',S.bohUpfront);
+  render();
+}
+
+function render(){
+  // ── FRONT OF HOUSE ──
+  const aivCost=(S.aiv&&!S.gbp)?P.aiv:0;
+  const foh=(S.gbp?P.gbp:0)+aivCost+(S.website?P.website:0)+(S.dynamic?P.dynamic:0)+(S.yt?P.yt:0);
+  let foh0,foh30,foh60,fohDisplay,fohDesc;
+  if(S.fohUpfront){
+    const disc=Math.round(foh*0.9), saving=foh-disc;
+    foh0=disc; foh30=0; foh60=0;
+    fohDisplay=disc.toLocaleString('en-US');
+    fohDesc='Paid in full on Day 0. You save '+f(saving)+'.';
+    set('foh-ut-desc',f(disc)+' on Day 0. You save '+f(saving)+'.');
+    set('foh-ut-save','Save '+f(saving));
+  } else {
+    const dep=Math.round(foh*0.5), half=Math.round((foh-dep)/2);
+    foh0=dep; foh30=half; foh60=foh-dep-half;
+    fohDisplay=foh.toLocaleString('en-US');
+    fohDesc='Paid in 3 installments over 60 days. Full ownership on final payment.';
+    set('foh-ut-desc','Single payment on Day 0. No milestone schedule.');
+    set('foh-ut-save','Save 10%');
+  }
+  set('foh-total-display',fohDisplay);
+  set('foh-desc',fohDesc);
+  set('foh-day0',f(foh0));
+  set('foh-day30',foh30?f(foh30):'\u2014');
+  set('foh-day60',foh60?f(foh60):'\u2014');
+  setWidth('foh-range-bar',Math.max(2,Math.min(100,Math.round((foh-4700)/(8100-4700)*100)))+'%');
+  set('foh-cur-label',f(foh));
+
+  // ── BACK OF HOUSE ──
+  const boh=(S.brain?P.brain:0)+(S.agents?P.agents:0);
+  let boh0,boh30,bohDisplay,bohDesc;
+  if(S.bohUpfront){
+    const disc=Math.round(boh*0.9), saving=boh-disc;
+    boh0=disc; boh30=0;
+    bohDisplay=disc.toLocaleString('en-US');
+    bohDesc='Paid in full on Day 0. You save '+f(saving)+'.';
+    set('boh-ut-desc',f(disc)+' on Day 0. You save '+f(saving)+'.');
+    set('boh-ut-save','Save '+f(saving));
+  } else {
+    boh0=Math.round(boh*0.5); boh30=boh-boh0;
+    bohDisplay=boh.toLocaleString('en-US');
+    bohDesc='Paid in 2 installments. 50% at kickoff, 50% at delivery.';
+    set('boh-ut-desc','Single payment on Day 0. No milestone schedule.');
+    set('boh-ut-save','Save 10%');
+  }
+  set('boh-total-display',bohDisplay);
+  set('boh-desc',bohDesc);
+  set('boh-day0',f(boh0));
+  set('boh-day30',boh30?f(boh30):'\u2014');
+  setWidth('boh-range-bar',Math.max(0,Math.min(100,Math.round((boh-3500)/(5300-3500)*100)))+'%');
+  set('boh-cur-label',f(boh));
+
+  // ── MONTHLY ──
+  const gbpmanageCost=(S.gbpmanage&&!S.content)?P.gbpmanage:0;
+  const mo=P.cloud+(S.listings?P.listings:0)+(S.content?P.content:0)+(S.crm?P.crm:0)+(S.mon?P.mon:0)+gbpmanageCost+(S.avatar?P.avatar:0);
+  set('mo-total-display',mo.toLocaleString('en-US'));
+  const spGbpmanage=document.getElementById('sp-gbpmanage');
+  if(spGbpmanage){
+    spGbpmanage.innerHTML=(S.gbpmanage&&S.content)
+      ?'<span style="font-size:12px;font-weight:700;color:#15803d;">Complimentary</span><small style="color:#15803d;">with Content Engine</small>'
+      :'$399<small>/month</small>';
+  }
+  setWidth('mo-range-bar',Math.max(2,Math.min(100,Math.round((mo-2293)/(5143-2293)*100)))+'%');
+  set('mo-cur-label',f(mo)+'/mo');
+
+  // ── STICKY BAR ──
+  const signingTotal=foh0+boh0;
+  const totalBuild=foh+boh;
+  set('bar-lbl',(S.fohUpfront&&S.bohUpfront)?'Pay in full today':'Start today for');
+  set('bar-amt',f(signingTotal));
+  const parts=[];
+  if(!S.fohUpfront&&foh30) parts.push(f(foh30)+' Day 30');
+  if(!S.fohUpfront&&foh60) parts.push(f(foh60)+' Day 60');
+  if(!S.bohUpfront&&boh30) parts.push(f(boh30)+' Day 30\u201360');
+  set('bar-note',parts.length?parts.join(' \u00b7 '):'Remaining invoiced at milestones');
+  set('bar-mo-amt',f(mo)+'/mo');
+  set('bar-mo-note','Starts after build');
+
+  window._pay={foh,boh,totalBuild,mo,signingTotal,foh0,foh30:foh30||0,foh60:foh60||0,boh0,boh30:boh30||0};
+}
+
+function openModal(){
+  const c=window._pay;
+  set('mod-tt','Your Package');
+  set('mod-amt',f(c.signingTotal));
+  set('mod-note','Due today at signing. Work begins within 48 hours.');
+  const lines=[];
+  lines.push(['\u2500\u2500 Front of the House \u2500\u2500','']);
+  if(S.gbp)         lines.push(['Google Business Profile Setup (covers AI Visibility)',f(P.gbp)]);
+  if(S.aiv&&!S.gbp) lines.push(['AI Search Setup',f(P.aiv)]);
+  if(S.website)     lines.push(['AI-Native Luxury Website',f(P.website)]);
+  if(S.dynamic)     lines.push(['NYC Market Data Feed',f(P.dynamic)]);
+  if(S.yt)          lines.push(['YouTube Strategy',f(P.yt)]);
+  if(S.fohUpfront)  lines.push(['10% Upfront Discount','\u2212'+f(Math.round(c.foh*0.1))]);
+  lines.push(['\u2500\u2500 Back of the House \u2500\u2500','']);
+  if(S.brain)       lines.push(['Gabrielle Winters Operating System',f(P.brain)]);
+  if(S.agents)      lines.push(['Automation Bundle',f(P.agents)]);
+  if(S.bohUpfront)  lines.push(['10% Upfront Discount','\u2212'+f(Math.round(c.boh*0.1))]);
+  lines.push(['\u2500\u2500 Monthly from Day 60 \u2500\u2500','']);
+  if(S.listings)    lines.push(['Listing Marketing Engine (up to 12/mo)',f(P.listings)+'/mo']);
+  if(S.content)     lines.push(['Social Media + Content',f(P.content)+'/mo']);
+  if(S.crm)         lines.push(['Database + Client Outreach',f(P.crm)+'/mo']);
+  if(S.mon)         lines.push(['AI Search Ranking Monitor',f(P.mon)+'/mo']);
+  if(S.gbpmanage)   lines.push(['Website Management + Google Business Profile',S.content?'Complimentary':f(P.gbpmanage)+'/mo']);
+  if(S.avatar)      lines.push(['AI Avatar Video Package',f(P.avatar)+'/mo']);
+  lines.push(['Software Subscriptions','$'+P.cloud+'/mo']);
+  let html=lines.map(([l,v])=>v
+    ?`<div class="ml"><span class="mll">${l}</span><span class="mlv">${v}</span></div>`
+    :`<div class="ml" style="background:var(--cream);"><span class="mll" style="font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;">${l}</span><span class="mlv"></span></div>`
+  ).join('');
+  html+=`<div class="ml tot"><span class="mll">Due Today</span><span class="mlv">${f(c.signingTotal)}</span></div>`;
+  setHTML('mod-lines',html);
+
+  const fohLines=[];
+  if(S.gbp)         fohLines.push('Google Business Profile Setup + AI Search Setup ($1,500)');
+  if(S.aiv&&!S.gbp) fohLines.push('AI Search Setup ($1,200)');
+  if(S.website)     fohLines.push('AI-Native Luxury Website ($3,500)');
+  if(S.dynamic)     fohLines.push('NYC Market Data Feed ($1,700)');
+  if(S.yt)          fohLines.push('YouTube Strategy ($700)');
+  const bohLines=[];
+  if(S.brain)       bohLines.push('Gabrielle Winters Operating System ($3,500)');
+  if(S.agents)      bohLines.push('Automation Bundle ($1,800)');
+  const moLines=[];
+  if(S.listings)    moLines.push('Listing Marketing Engine ($1,800/mo)');
+  if(S.content)     moLines.push('Social Media + Content ($1,800/mo)');
+  if(S.crm)         moLines.push('Database + Client Outreach ($199/mo)');
+  if(S.mon)         moLines.push('AI Search Ranking Monitor ($150/mo)');
+  if(S.gbpmanage)   moLines.push(S.content?'Website Management + Google Business Profile (complimentary)':'Website Management + Google Business Profile ($399/mo)');
+  if(S.avatar)      moLines.push('AI Avatar Video Package ($1,200/mo)');
+  moLines.push('Software Subscriptions ($144/mo)');
+
+  const msgBody=
+    `Hi Jay \u2014 I have reviewed the proposal and I am ready to move forward.%0A%0A`+
+    `*Front of the House: ${f(c.foh)}*%0A${fohLines.join('%0A')}%0A%0A`+
+    `*Back of the House: ${f(c.boh)}*%0A${(bohLines.length?bohLines.join('%0A'):'Not selected')}%0A%0A`+
+    `*Monthly: ${f(c.mo)}/mo*%0A${moLines.join('%0A')}%0A%0A`+
+    `Due today: ${f(c.signingTotal)}%0A%0A`+
+    `Please send the PandaDoc agreement. \u2014 Gabrielle`;
+  const subject=encodeURIComponent(`Ready to Sign \u2014 Gabrielle Winters ${f(c.totalBuild)} Build + ${f(c.mo)}/mo`);
+  const wa=document.getElementById('whatsapp-link'); if(wa) wa.href=`https://wa.me/12018892837?text=${msgBody}`;
+  const em=document.getElementById('email-link'); if(em) em.href=`mailto:jbatra@aithical.pro?subject=${subject}&body=${msgBody.replace(/%0A/g,'%0D%0A')}`;
+
+  const btn=document.getElementById('pay-stripe-btn');
+  const lbl=document.getElementById('pay-btn-label');
+  if(btn){btn.disabled=false;btn.style.opacity='1';}
+  if(lbl) lbl.textContent=`Pay ${f(c.signingTotal)} with Card \u2192`;
+  const errEl=document.getElementById('pay-error');
+  if(errEl) errEl.style.display='none';
+  const ov=document.getElementById('overlay'); if(ov) ov.classList.add('open');
+}
+
+async function startCheckout(){
+  const c=window._pay;
+  const btn=document.getElementById('pay-stripe-btn');
+  const lbl=document.getElementById('pay-btn-label');
+  const errEl=document.getElementById('pay-error');
+  if(btn){btn.disabled=true;btn.style.opacity='0.7';}
+  if(lbl) lbl.textContent='Preparing secure checkout\u2026';
+  if(errEl) errEl.style.display='none';
+  try {
+    const res=await fetch('/api/checkout',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({services:{...S},foh:c.foh,boh:c.boh,mo:c.mo,signingTotal:c.signingTotal})});
+    const data=await res.json();
+    if(!res.ok||!data.url) throw new Error(data.error||'Could not create checkout session.');
+    window.location=data.url;
+  } catch(err){
+    if(btn){btn.disabled=false;btn.style.opacity='1';}
+    if(lbl) lbl.textContent=`Pay ${f(c.signingTotal)} with Card \u2192`;
+    if(errEl){errEl.textContent=err.message+' \u2014 or contact Jay directly below.';errEl.style.display='block';}
+  }
+}
+
+function expand(id){
+  const sd=document.getElementById('sd-'+id);
+  const chev=document.getElementById('chev-'+id);
+  if(!sd) return;
+  const isOpen=sd.classList.toggle('op');
+  if(chev) chev.classList.toggle('op',isOpen);
+}
+function closeModal(){ const ov=document.getElementById('overlay'); if(ov) ov.classList.remove('open'); }
+function closeOut(e){ if(e.target===document.getElementById('overlay')) closeModal(); }
+
+render();
+</script>
+</body>
+</html>
