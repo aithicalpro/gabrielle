@@ -356,11 +356,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--n3);color:var(--text);fon
       <div class="sp" id="sp-gbp">$1,500<small>one-time</small></div>
     </div>
 
-    <!-- ADVANCED TOGGLE WRAPPER -->
-    <details style="margin:0;">
-    <summary style="list-style:none;background:#f9fafb;border-bottom:1px solid var(--border);padding:10px 18px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5a6a82;cursor:pointer;display:flex;align-items:center;gap:6px;">
-      <span style="flex:1;">See what&rsquo;s included &mdash; tap to expand</span><span style="font-size:16px;color:#B8860B;">&#9662;</span>
-    </summary>
+    <!-- ADVANCED ITEMS — hidden by default, shown via JS button -->
+    <div id="foh-advanced" style="display:none;">
     <!-- AI SEARCH SETUP -->
     <div class="sr" id="r-aiv">
       <div class="sw on" id="sw-aiv" onclick="event.stopPropagation();tog('aiv')"><div class="swk"></div></div>
@@ -542,7 +539,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--n3);color:var(--text);fon
       <div class="sp" id="sp-agents">$1,800<small>add-on</small></div>
     </div>
 
-  </details>
+  </div><!-- /foh-advanced -->
+
+    <!-- SHOW/HIDE ADVANCED BUTTON -->
+    <div style="padding:12px 18px;border-top:1px solid var(--border);background:#fafafa;">
+      <button onclick="toggleAdvanced()" id="foh-adv-btn"
+        style="width:100%;background:none;border:1px solid #dde3ed;border-radius:6px;padding:9px 14px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#5a6a82;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;">
+        <span id="foh-adv-label">See everything included</span>
+        <span id="foh-adv-arrow" style="font-size:14px;color:#B8860B;">&#9662;</span>
+      </button>
+    </div>
 
   </div>
 
@@ -977,6 +983,16 @@ function expand(id){
   if(!sd) return;
   const isOpen=sd.classList.toggle('op');
   if(chev) chev.classList.toggle('op',isOpen);
+}
+function toggleAdvanced(){
+  const adv=document.getElementById('foh-advanced');
+  const lbl=document.getElementById('foh-adv-label');
+  const arr=document.getElementById('foh-adv-arrow');
+  if(!adv) return;
+  const open = adv.style.display==='block';
+  adv.style.display = open ? 'none' : 'block';
+  if(lbl) lbl.textContent = open ? 'See everything included' : 'Hide details';
+  if(arr) arr.innerHTML = open ? '&#9662;' : '&#9652;';
 }
 function closeModal(){ const ov=document.getElementById('overlay'); if(ov) ov.classList.remove('open'); }
 function closeOut(e){ if(e.target===document.getElementById('overlay')) closeModal(); }
